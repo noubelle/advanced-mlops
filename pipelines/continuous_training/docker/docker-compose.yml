@@ -10,7 +10,9 @@ services:
     image: credit_score_classification:ct-pipeline-latest
     container_name: credit_score_classification_ct_pipeline
     volumes:
-      - ${HONE}/airflow/artifacts:/home/codespaces/artifacts
+      - ${HOME}/airflow/artifacts:/home/codespaces/artifacts
+      - ${HOME}/bentoml:/home:/codespaces/bentoml
+      - ${HOME}/mlruns:/home:/codespaces/mlruns
     environment:
       PYTHONPATH: /home/codespace
       ARTIFACTS_PATH: /home/codespace/artifacts
