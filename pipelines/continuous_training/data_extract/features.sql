@@ -1,4 +1,4 @@
--- 1. 일주일 전 날짜 이전 데이터 삭제
+-- 1. 일주일 전 날짜 이전 데이터 삭제 (JINJA 템플릿 사용)
 DELETE FROM mlops.credit_score_features_target
 WHERE base_dt <= DATE_FORMAT(
         DATE_ADD(
